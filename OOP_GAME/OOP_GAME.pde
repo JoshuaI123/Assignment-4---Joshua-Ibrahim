@@ -31,14 +31,33 @@ void draw(){
   triangle(hookX + 160,hookY+75, hookX+190,hookY+100, hookX+220,hookY+75);
   
   if(isShot == true){
-    hookX += 2;
-    hookY += 2;
+    if(hookX + 190 < clickLocatX){
+    hookX = hookX + 2;
+    }
+    if(hookY + 78 < clickLocatY){
+    hookY = hookY + 2;
+    }
+      if(hookX + 190 > clickLocatX){
+    hookX = hookX - 2;
+    }
+    if(hookY + 78 > clickLocatY){
+    hookY = hookY - 2;
+    }  
+    
+    
+    //Take hook back to start
+    if((hookX + 190 == clickLocatX) && (hookY+78 == clickLocatY) ){
+    hookX = 0;
+    hookY = 0;
   }
+}
 
 }//end of draw
 
 void mousePressed(){
   
-
+clickLocatX = mouseX;
+clickLocatY = mouseY;
+isShot = true;
   
 }
