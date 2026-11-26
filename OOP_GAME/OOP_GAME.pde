@@ -5,13 +5,14 @@
 
 void setup(){
   size(400,400);
-  background(70,100,200);
+
   pixelDensity(2);
 }//end of setup
 
 //Draw
 
 void draw(){
+    background(70,100,200);
   //Draw the boat 
   noStroke();
   fill(200);
@@ -20,7 +21,8 @@ void draw(){
   ellipse(200,0,200,75);
   
   //Draw hook
-  
+  fill(0);
+  quad(mouseX,150   ,mouseX,125,   mouseX,145,    mouseX, 175);
 
   
 }//end of draw
