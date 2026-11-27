@@ -20,7 +20,10 @@ void draw(){
   ellipse(200,0,200,75);
   
   //Draw hook
-  
-
-  
+  //draw fishy
+  fill(255,215,0);
+  ellipse(200,200,30,15);
+  triangle(190,200,170,185,180,215);
+  fill(75);
+  ellipse(210,197,7,7);
 }//end of draw
