@@ -35,20 +35,21 @@ void draw(){
     hookX = hookX + 2;
     }
     if(hookY + 78 < clickLocatY){
-    hookY = hookY + 2;
+    hookY = hookY + 3;
     }
       if(hookX + 190 > clickLocatX){
     hookX = hookX - 2;
     }
     if(hookY + 78 > clickLocatY){
-    hookY = hookY - 2;
+    hookY = hookY - 3;
     }  
     
     
     //Take hook back to start
-    if((hookX + 190 == clickLocatX) && (hookY+78 == clickLocatY) ){
+    if((hookX + 190 >= clickLocatX-2) && (hookY+100 >= clickLocatY-3) ){
     hookX = 0;
     hookY = 0;
+    isShot = false;
   }
 }
 
