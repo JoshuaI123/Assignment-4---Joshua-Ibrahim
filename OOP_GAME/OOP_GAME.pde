@@ -1,29 +1,30 @@
-
+Fish fish; 
 
 
 //SETUP
 
 void setup(){
   size(400,400);
-  background(70,100,200);
+ 
   pixelDensity(2);
+  
+  //make a fish
+  fish = new Fish();
+  
 }//end of setup
 
 //Draw
 
 void draw(){
-  //Draw the boat 
+   background(70,100,200);
+  //Draws the boat 
   noStroke();
   fill(200);
   rect(190,30,20,30);
   fill(255,100,100);
   ellipse(200,0,200,75);
-  
-  //Draw hook
-  //draw fishy
-  fill(255,215,0);
-  ellipse(200,200,30,15);
-  triangle(190,200,170,185,180,215);
-  fill(75);
-  ellipse(210,197,7,7);
+  //draw the classes
+fish.moveFish();
+  fish.displayFish();
+ 
 }//end of draw
